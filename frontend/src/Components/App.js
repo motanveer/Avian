@@ -1,4 +1,5 @@
 import styles from './App.module.css'
+import logo from '../Assets/Logo.svg'
 
 
 import React, { Component } from 'react'
@@ -6,8 +7,10 @@ import React, { Component } from 'react'
 export class App extends Component {
     render() {
         return (
-            <div>
-                <h1 className={styles.Shit}>Shit</h1>
+            <div className={styles.Container}>
+                <div className={styles.Header}>
+                    <img className={styles.Logo} src={logo} />
+                </div>
             </div>
         )
     }

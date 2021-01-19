@@ -1,3 +1,19 @@
-.Shit{
-    color: green;;
+.Container
+{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.Header
+{
+    height: 300px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.Logo{
+    width: 450px;
 }
