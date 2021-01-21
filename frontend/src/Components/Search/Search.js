@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styles from './Search.module.css'
 
+import data from '../../../MOCK_DATA.json'
+
 import SearchInput from '../SearchInput/SearchInput.js'
 
 export class Search extends Component {
@@ -16,6 +18,7 @@ export class Search extends Component {
 
     handleChange = (e) =>{
         console.log(e.target.value)
+        console.log(data)
     }
 }
 
