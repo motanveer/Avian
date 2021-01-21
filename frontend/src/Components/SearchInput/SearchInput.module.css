@@ -1,0 +1,14 @@
+.Input{
+width: 85%;
+max-width: 550px;
+height: 70px;
+border: 2.5px solid #20BF6B;
+box-sizing: border-box;
+border-radius: 5px;
+font-weight: 300;
+font-size: 25px;
+align-self: center;
+
+background: transparent;
+margin: 0 auto;
+}

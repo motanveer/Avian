@@ -1,19 +1,35 @@
+
 .Container
 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     height: 100%;
+    width: 100%;
 }
 
-.Header
+.Header_Area
 {
-    height: 300px;
-    display: flex;
+  height: 20.33%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
+.Search_Area{
+    height: 40.33%;
+}
+
+.Progress_Area{
+    height: 35%;
+    
+}
+
+
+
+
 .Logo{
-    width: 450px;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
 }
