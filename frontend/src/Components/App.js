@@ -20,8 +20,10 @@ export class App extends Component {
                     <div className={styles.Search_Container}>
                         <Search/>
                     </div>
-                    <div className={styles.Progress_Container}><Progress/></div>
                 </div>
+
+                <div className={styles.Progress_Container}><Progress/></div>
+
             </div>
         )
     }

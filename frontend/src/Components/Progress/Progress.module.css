@@ -10,7 +10,8 @@
 }
 
 .Container_Hidden{
-    height: 9%;
+    height:100%;
+    z-index: 1;
    
     
 }

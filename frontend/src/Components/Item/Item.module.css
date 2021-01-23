@@ -1,0 +1,41 @@
+.Container, .Container_Active
+{
+    
+    max-width: 650px;
+    width: 85%;
+    padding: 60px;
+    height: 50px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    margin-bottom: 60px;
+    text-align: left;
+    border: none;
+
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+}
+
+.Container:hover{
+    border: 2px #20BF6B solid;
+
+}
+
+.Container_Active{
+    border: 2px #20BF6B solid;
+}
+
+.Resource_Title{
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.Resource_Size{
+    margin-top: 10px;
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 1.3em;
+}
