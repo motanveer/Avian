@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+#Data
+Data/
+/src/MOCK_DATA.json
+
 # testing
 /coverage
 
