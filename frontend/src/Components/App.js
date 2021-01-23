@@ -16,14 +16,12 @@ export class App extends Component {
                     <img className={styles.Logo} src={logo} />
                 </div>
 
-                <div className={styles.Search_Area}>
-                    <Search/>
+                <div className={styles.Content_Area}>
+                    <div className={styles.Search_Container}>
+                        <Search/>
+                    </div>
+                    <div className={styles.Progress_Container}><Progress/></div>
                 </div>
-
-                <div className={styles.Progress_Area}>
-                    <Progress/>
-                </div>
-
             </div>
         )
     }

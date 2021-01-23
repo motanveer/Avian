@@ -1,4 +1,16 @@
-.Container{
+.Container_Active, .Container_Hidden{
     background-color: #20BF6B;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.Container_Active{
     height: 100%;
+}
+
+.Container_Hidden{
+    height: 9%;
+   
+    
 }

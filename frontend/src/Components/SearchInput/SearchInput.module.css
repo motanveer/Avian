@@ -1,14 +1,16 @@
 .Input{
 width: 85%;
 max-width: 550px;
-height: 70px;
-border: 2.5px solid #20BF6B;
+padding: 25px;
+border: none;
+border-bottom: 3.5px solid #20BF6B;
 box-sizing: border-box;
-border-radius: 5px;
 font-weight: 300;
 font-size: 25px;
+border-radius: 0;
 align-self: center;
 
-background: transparent;
+background-color: transparent;
+
 margin: 0 auto;
 }
