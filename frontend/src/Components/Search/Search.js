@@ -20,7 +20,7 @@ export class Search extends Component {
     render() {
         
         const resultData  = Object.entries(this.state.resourceList)
-        var resultList  = resultData.map((resource, index) => { return <Item key={index.toString()} title={resource[1].filename} size={resource[1].size}  />})
+        var resultList  = resultData.map((resource, index) => { return <Item key={index.toString()} data={resource[1]} />})
         
 
         //If the result of the query is all results, then display nothing
@@ -68,6 +68,13 @@ export class Search extends Component {
         this.setState({resourceList: filteredData})
         //console.log(this.state.resourceList)
         //console.log(filteredData)
+    }
+
+    handleSelection = (data) =>{
+        //Handle selection of item:
+
+
+        //Handle de-selection of item:
     }
 
 }

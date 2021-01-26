@@ -11,8 +11,8 @@ export class Item extends Component {
     render() {
         return (
             <button onClick={this.handleClick} className={this.state.class}>
-                <p className={styles.Resource_Title}>{this.props.title}</p>
-                <p className={styles.Resource_Size}>{this.bytesToSize(this.props.size)}</p>
+                <p className={styles.Resource_Title}>{this.props.data.filename}</p>
+                <p className={styles.Resource_Size}>{this.bytesToSize(this.props.data.size)}</p>
             </button>
         )
     }
@@ -28,7 +28,6 @@ export class Item extends Component {
 
 
     //Converts byte into closest unit
-
     bytesToSize = (bytes) => {
 
         var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
