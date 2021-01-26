@@ -12,14 +12,23 @@ import SearchInput from '../SearchInput/SearchInput.js'
 export class Search extends Component {
 
     state={
-        resourceList: {}
+        resourceList: {},
+        selectedResorces: [] 
     }
 
 
     render() {
         
         const resultData  = Object.entries(this.state.resourceList)
-        const resultList  = resultData.map((resource, index) => { return <Item key={index.toString()} title={resource[1].filename} size={resource[1].size} />})
+        var resultList  = resultData.map((resource, index) => { return <Item key={index.toString()} title={resource[1].filename} size={this.bytesToSize(resource[1].size)}  />})
+        
+
+        //If the result of the query is all results, then display nothing
+        console.log(resultList.length)
+        if(resultList.length == data.length){
+            resultList = [];
+        }
+
 
         return (
             <div className={styles.Container}>
@@ -30,20 +39,12 @@ export class Search extends Component {
 
                 <div className={styles.Results_Container}>
                 {resultList}
-
                 </div>
-                {/*
-                <Item  key="exampleA" title="Call of Duty: Black Ops II" size="24 GB"/>
-                <Item  key="exampleB" title="God of War III" size="44 GB"/>
-                <Item  key="exampleC" title="Naruto Ultimate Ninja Storm 2" size="14 GB"/>
-                <Item  key="exampleD" title="Uncharted 2" size="32 GB"/>
-                <Item  key="exampleE" title="Naruto Ultimate Ninja Storm 2" size="14 GB"/>
-                */}
-
             </div>
         )
     }
 
+    
     handleSearch = (e) =>{
 
         var resourceData = data;
@@ -62,47 +63,20 @@ export class Search extends Component {
         })
 
         console.log(Object.entries(this.state.resourceList).length)
-        
-        if (Object.entries(filteredData).length === Object.entries(resourceData).length){
-            this.setState({resourceList: {}})
-        }else if(Object.entries(filteredData).length === 1718){
-            this.setState({resourceList: {}})
-
-        }
-        
-        //console.log(resultList)
-
+       
 
         this.setState({resourceList: filteredData})
         //console.log(this.state.resourceList)
         //console.log(filteredData)
-
     }
 
-
-    handleChange = (e) => {
-        var test = data;
-
-        test.forEach((resource, index, array) => {
-
-            array[index].filename = resource.filename.replace(/_/g, ' ')
-        })
-
-
-        console.log(test)
-
-
-        /*var result = test.filter(resource => {
-            if (resource.filename.includes(e.target.value)) {
-                return resource.filename
-            }
-        })*/
-
-        //result.forEach(resource => console.log(resource.filename))
-    }
+        bytesToSize = (bytes) => {
+        var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+        if (bytes == 0) return '0 Byte';
+        var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+        return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+     }
 }
-
-
 
 
 export default Search
