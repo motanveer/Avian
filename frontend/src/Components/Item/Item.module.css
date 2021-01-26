@@ -18,12 +18,18 @@
 }
 
 .Container:hover{
-    border: 2px #20BF6B solid;
+    border: 4px #20BF6B solid;
+    cursor: pointer;
 
 }
 
 .Container_Active{
-    border: 2px #20BF6B solid;
+    border: 4px #20BF6B solid;
+}
+
+.Container_Active:hover{
+    border: none;
+    cursor: pointer;
 }
 
 .Resource_Title{
