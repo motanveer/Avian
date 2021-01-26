@@ -18,11 +18,19 @@ export class Item extends Component {
     }
 
     handleClick = (e) =>{
+
+        //Handle selection of an item:
+
         if (this.state.class === styles.Container){
             this.setState({class: styles.Container_Active})
+            this.props.handleAction[0](this.props.data)
         } 
+        
+        //Handle deselction of an item:
+
         else{
             this.setState({class: styles.Container})
+            this.props.handleAction[1](this.props.data)
         }
     }
 
