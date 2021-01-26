@@ -3,7 +3,7 @@ import styles from './Item.module.css'
 
 export class Item extends Component {
   
-    constructor(props)
+    constructor(props){super(props)}
     state={
         class: styles.Container
     }
@@ -12,7 +12,7 @@ export class Item extends Component {
         return (
             <button onClick={this.handleClick} className={this.state.class}>
                 <p className={styles.Resource_Title}>{this.props.title}</p>
-                <p className={styles.Resource_Size}>{this.props.size}</p>
+                <p className={styles.Resource_Size}>{this.bytesToSize(this.props.size)}</p>
             </button>
         )
     }
@@ -25,6 +25,17 @@ export class Item extends Component {
             this.setState({class: styles.Container})
         }
     }
+
+
+    //Converts byte into closest unit
+
+    bytesToSize = (bytes) => {
+
+        var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+        if (bytes == 0) return '0 Byte';
+        var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+        return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+     }
 
 }
 
