@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styles from './Search.module.css'
 
 import Item from '../Item/Item.js'
+import QueueButton from '../Buttons/QueueButton.js'
 
 import data from '../../MOCK_DATA.json'
 
@@ -29,6 +30,13 @@ export class Search extends Component {
             resultList = [];
         }
 
+        const button = () => {
+            if (this.state.selectedResorces.length > 0)
+            
+            {return true}
+            else{return false}
+        }
+
 
         return (
             <div className={styles.Container}>
@@ -40,6 +48,7 @@ export class Search extends Component {
                 <div className={styles.Results_Container}>
                 {resultList}
                 </div>
+                <QueueButton data={this.state.selectedResorces} />
             </div>
         )
     }

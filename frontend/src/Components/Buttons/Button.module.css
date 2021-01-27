@@ -1,0 +1,26 @@
+.QueueButton_Active, .QueueButton{
+    width: 229px;
+    height: 55px;
+    background-color: #20BF6B;
+    color: white;
+    font-weight: bold;
+    border: none;
+ 
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+letter-spacing: 2px;
+text-transform: uppercase;
+    margin-bottom: 200px;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+.QueueButton{
+    background-color: lightgrey;
+    color: gray;
+    cursor: not-allowed;
+}
